@@ -414,8 +414,8 @@ const Tridi = forwardRef(
 				const pin = {
 					id: TridiUtils.uid(),
 					idHotspot:idHotspot,
-					nombre:nombre,
-					extra:extra,
+					nombre:'nombre',
+					extra:"sd",
 					frameId: currentImageIndex,
 					x,
 					y,
