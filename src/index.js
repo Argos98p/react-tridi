@@ -392,7 +392,7 @@ const Tridi = forwardRef(
 			[isAutoPlayRunning, resumeAutoplayOnMouseLeave, stopDragging, toggleAutoplay, touch]
 		);
 
-		const imageViewerClickHandler = (e) => {
+		const imageViewerClickHandler = (e,idHotspot,nombre,extra) => {
 			if (isRecording) {
 				const viewerWidth = _viewerImageRef.current.clientWidth;
 				const viewerHeight = _viewerImageRef.current.clientHeight;
@@ -413,6 +413,9 @@ const Tridi = forwardRef(
 				const y = ((clientY - viewerOffsetTop) / viewerHeight).toFixed(6);
 				const pin = {
 					id: TridiUtils.uid(),
+					idHotspot:idHotspot,
+					nombre:nombre,
+					extra:extra,
 					frameId: currentImageIndex,
 					x,
 					y,
